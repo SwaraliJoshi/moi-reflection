@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# VS Code settings
+.vscode/
+
+# macOS metadata
+.DS_Store
+
+# Logs
+*.log
+
+# Pydantic cache
+*.pydantic_cache
+
+# dotenv files
+.env
+
+# Coverage and test reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Migrations
+alembic/
+
+# MyPy
+.mypy_cache/
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# Local dev scripts
+run_backend.sh
