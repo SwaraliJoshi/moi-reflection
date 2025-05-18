@@ -19,6 +19,15 @@ class MongoDBTaskRepository:
             task["id"] = str(task["_id"])
             del task["_id"]
         return tasks
+    
+    async def get(self, task_id: str):
+        try:
+            task = await self.collection.find_one({"_id": ObjectId(task_id)})
+            task["id"] = str(task["_id"])
+            del task["_id"]
+            return task
+        except:
+            return None
 
     async def update(self, task_id: str, task: Task):
         await self.collection.update_one({"_id": ObjectId(task_id)}, {"$set": task.dict(exclude={"id"})})

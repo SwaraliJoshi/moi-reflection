@@ -17,6 +17,11 @@ async def create(task: Task):
 async def list_tasks():
     return await task_service.get_all_tasks()
 
+@router.get("/tasks/{task_id}")
+async def get_task(task_id: str):
+    task = await task_service.get_task_by_id(task_id)
+    return task
+
 @router.put("/tasks/{task_id}")
 async def update(task_id: str, task: Task):
     await task_service.update_task(task_id, task)
