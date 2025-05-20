@@ -1,5 +1,5 @@
-from app.domain.task_model import Task
-from app.infrastructure.mongodb_task_repo import MongoDBTaskRepository
+from app.models.Task import Task
+from app.repositories.mongodb_task_repo import MongoDBTaskRepository
 
 repo = MongoDBTaskRepository()
 

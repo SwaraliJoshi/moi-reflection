@@ -1,11 +1,11 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from bson import ObjectId
 from app.core.config import settings
-from app.domain.task_model import Task
+from app.models.Task import Task
 
 class MongoDBTaskRepository:
     def __init__(self):
-        self.client = AsyncIOMotorClient(settings.MONGO_URL)
+        self.client = AsyncIOMotorClient(settings.MONGO_DB_URL)
         self.db = self.client[settings.DB_NAME]
         self.collection = self.db["tasks"]
 
