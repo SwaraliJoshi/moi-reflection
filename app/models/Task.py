@@ -9,5 +9,5 @@ class Task(BaseModel):
     title: str
     description: Optional[str] = None
     status: Status = Status.new
-    dueDate: datetime 
-    tags: Optional[List[str]]
+    dueDate: Optional[datetime] = None
+    tags: Optional[List[str]] = None
